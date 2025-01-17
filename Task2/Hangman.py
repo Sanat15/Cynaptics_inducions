@@ -202,11 +202,31 @@ class CynapticsHangman:
         self.save_model("improved_hangman_model.pth")
         print("Training complete.")
 
+    def summary(self):
+        """Print a summary of the Hangman model and its parameters"""
+        print("CynapticsHangman Model Summary")
+        print("-" * 40)
+        print(f"Model Architecture: {self.model.__class__.__name__}")
+        print(f"Device: {self.device}")
+        print(f"Number of Lives: {self.lives_remaining}")
+        print(f"Dictionary Size: {len(self.valid_dict)}")
+        print(f"Guessed Letters: {', '.join(self.guessed_letters)}")
+        
+        # Print model parameters
+        total_params = sum(p.numel() for p in self.model.parameters())
+        trainable_params = sum(p.numel() for p in self.model.parameters() if p.requires_grad)
+        print(f"\nTotal Parameters: {total_params:,}")
+        print(f"Trainable Parameters: {trainable_params:,}")
+        
+        # Print model structure
+        print("\nModel Structure:")
+        print(self.model)
 
 # Example Usage
 hangman = CynapticsHangman()
+hangman.summary()
 hangman.train(episodes=100)
-hangman.load_model("improved_hangman_model.pth")
+hangman.load_model("hangman_model.pth")
 
 win_count = 0
 total_games = 10
