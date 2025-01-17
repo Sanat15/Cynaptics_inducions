@@ -36,13 +36,13 @@ Cynaptics_inductions/
 
 ------scripts/
 
----------gpt2.py
+---------gpt2.ipynb
 
 ---------llama.py
 
 ------images/
 
----------image_1.jpg
+---------image_1.png
 
----------image_2.jpg
+---------image_2.png
 
