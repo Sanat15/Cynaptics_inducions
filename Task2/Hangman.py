@@ -126,6 +126,7 @@ class CynapticsHangman:
 # Example Usage
 hangman = CynapticsHangman()
 hangman.train(episodes=100)
+hangman.save_model('/content/hangman_model_weights.pth')
 hangman.load_model("hangman_model.pth")
 win_count = 0
 for i in range(10):
