@@ -1,5 +1,9 @@
 # Cynaptics_inducions
 This is the submission repository for the CynapticsIITI 2025 Inductions.
+
+
+
+
 The formate of the reposatory is
 Cynaptics_inductions/
 ---README
